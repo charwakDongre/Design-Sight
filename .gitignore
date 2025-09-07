@@ -29,7 +29,13 @@ logs/**/*.log
 *.cache
 
 # Node modules
+client/node_modules/
+server/node_modules/
 node_modules/
+
+# Database files
+data/
+db/
 
 # Uploads
 uploads/
