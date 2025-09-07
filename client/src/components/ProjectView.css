@@ -1,0 +1,37 @@
+/* client/src/components/ProjectView.css */
+.project-container {
+  margin-top: 20px;
+}
+
+.controls-panel {
+  margin-bottom: 20px;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.feedback-box {
+  box-shadow: 0 0 5px 3px rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 2px solid;
+  cursor: pointer;
+}
+
+.feedback-box.severity-high {
+  border-color: red;
+}
+.feedback-box.severity-medium {
+  border-color: orange;
+}
+.feedback-box.severity-low {
+  border-color: yellowgreen;
+}
