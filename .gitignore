@@ -44,3 +44,4 @@ uploads/
 .env
 .env.*
 *.envdata/db/
+data/db/
