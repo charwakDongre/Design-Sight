@@ -43,4 +43,4 @@ uploads/
 # Environment files
 .env
 .env.*
-*.env
+*.envdata/db/
