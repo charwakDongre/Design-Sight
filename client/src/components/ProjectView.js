@@ -1,4 +1,3 @@
-// client/src/components/ProjectView.js
 import React, { useState } from 'react';
 import './ProjectView.css';
 
