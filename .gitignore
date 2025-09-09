@@ -1,48 +1,21 @@
-yarn-debug.log*
-yarn-error.log*
-
-# Logs
-logs
-*.log
-logs/**/*.log
-
-# Secrets and credentials
-*.pem
-*.key
-*.crt
-*.p12
-*.pfx
-*.cert
-*.enc
-*.jks
-
-# IDE-specific files
-.vscode/
-.idea/
-*.swp
-*.swo
-*.bak
-
-# Temporary files
-*.tmp
-*.temp
-*.cache
-
-# Node modules
-client/node_modules/
-server/node_modules/
+# Node
 node_modules/
+**/node_modules/
 
-# Database files
-data/
-db/
+# Build outputs
+client/build/
+dist/
+*.log
 
-# Uploads
-uploads/
-
-# Environment files
+# Env
 .env
-.env.*
-*.envdata/db/
+server/.env
+client/.env
+
+# OS
+.DS_Store
+
+# Local DB / uploads
 data/db/
-.env
+server/uploads/
+uploads/
