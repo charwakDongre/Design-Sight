@@ -1,4 +1,3 @@
-// designsight-prototype/server/models/Project.js
 const mongoose = require('mongoose');
 
 const feedbackSchema = new mongoose.Schema({
