@@ -1,90 +1,94 @@
-# DesignSight - AI-Powered Design Feedback Platform
+DesignSight - AI-Powered Design Feedback Platform
+Project Overview
+Design teams often struggle with inconsistent and scattered feedback on their designs. DesignSight is my take on a MERN stack prototype that solves this problem. It's an AI-powered platform that provides structured, coordinate-anchored feedback on uploaded designs. This project demonstrates my ability to build a full-stack application, integrate real AI services, and apply solid product thinking within a MERN stack environment.
 
-### Project Overview
+Core Technology Stack
+Frontend: React
 
-[cite_start]DesignSight is a full-stack, AI-powered design feedback platform built to provide structured and actionable feedback on visual designs[cite: 7]. [cite_start]It addresses the problem of inconsistent feedback by integrating a real AI vision model to analyze uploaded screen designs and generate systematic analysis with coordinate-anchored feedback[cite: 7]. [cite_start]The platform is designed to test full-stack capabilities, AI integration skills, and product thinking within a MERN stack environment[cite: 9, 10, 11].
+Backend: Node.js & Express.js
 
-***
+Database: MongoDB
 
-### Core Technology Stack
+AI Integration: Google Gemini API (using axios for HTTP requests)
 
-* **Frontend**: React
-* **Backend**: Node.js & Express.js
-* **Database**: MongoDB
-* [cite_start]**AI Integration**: Google Gemini API (using `axios` for HTTP requests) [cite: 23, 34]
-* [cite_start]**Deployment**: Docker Compose [cite: 19]
+Deployment: Docker Compose
 
-***
+Key Features (MVP)
+The prototype I built demonstrates the core functionality required by the assignment brief:
 
-### Key Features (MVP)
+Image Upload: The app lets users upload a design image (PNG/JPG) which is stored on the server.
 
-The current prototype demonstrates the core functionality required by the assignment brief:
+AI-Powered Analysis: The backend integrates with the Google Gemini API to analyze the uploaded designs.
 
-* [cite_start]**Image Upload**: Users can upload screen design images (PNG/JPG) which are stored on the server[cite: 30].
-* [cite_start]**AI-Powered Analysis**: The backend integrates with the Google Gemini API to analyze the uploaded designs[cite: 34].
-* [cite_start]**Structured Feedback**: The AI generates feedback that includes coordinates, severity (high, medium, low), and relevant team roles (Designer, Developer, etc.)[cite: 41, 42, 44].
-* [cite_start]**Coordinate-Anchored Feedback**: The frontend displays this feedback as an interactive overlay on the uploaded image[cite: 54].
-* [cite_start]**Role-Based Filtering**: The user can switch roles and filter feedback based on their perspective, allowing them to see only the information relevant to their role[cite: 51].
-* [cite_start]**Error Handling**: The application is designed to handle potential API failures and other errors gracefully[cite: 99].
+Structured Feedback: The AI's output includes specific coordinates, severity levels, and tags for different team roles.
 
-***
+Coordinate-Anchored Feedback: I built an interactive frontend overlay that visually highlights the AI's feedback on the image.
 
-### Local Setup & Installation
+Role-Based Filtering: The user can switch roles and filter feedback based on their perspective, allowing them to see only the information relevant to their role.
 
-[cite_start]This project is configured to run entirely with Docker Compose[cite: 19].
+Error Handling: The application is designed to handle potential API failures and other issues gracefully.
 
-**Prerequisites**
-* Docker and Docker Compose installed on your system.
+Local Setup & Installation
+I designed the project to be easy to run end-to-end with Docker Compose.
 
-**Step-by-step Installation**
+Prerequisites
 
-1.  **Clone the Repository**:
-    ```bash
-    git clone [your-github-repo-link]
-    cd designsight-prototype
-    ```
+Docker and Docker Compose installed on your system.
 
-2.  **Set up AI API Key**:
-    [cite_start]The backend uses a real AI vision model, which requires a Gemini API key[cite: 22, 23]. You can obtain a key for free from Google AI Studio.
-    * Create a file named `.env` in the `server` directory and add your API key:
-        ```
-        GEMINI_API_KEY=AIzaSyBkV6k0lsS6FTsJ7CBbQhuS9MOrDSoL12A
-        ```
+Step-by-step Installation
 
-3.  **Run the Application**:
-    From the root directory of the project, run the following command. [cite_start]The `--build` flag is crucial to ensure that Docker creates images with the latest code and dependencies[cite: 19].
-    ```bash
-    docker-compose up --build
-    ```
-4.  **Access the Application**:
-    Once the command is complete and all services are running, open your web browser and navigate to:
-    ```
-    http://localhost:3000
-    ```
+Clone the Repository:
 
-***
+Bash
 
-### AI Integration & Cost Analysis
+git clone [your-github-repo-link]
+cd designsight-prototype
+Set up AI API Key:
+I used the Google Gemini API, which is a real AI vision model as required. You'll need to get your own key from Google AI Studio.
 
-* [cite_start]**Provider**: The prototype uses the **Google Gemini API** (`gemini-1.5-flash` model) for its AI vision capabilities[cite: 23].
-* [cite_start]**Cost**: The Gemini API offers a free tier with a generous rate limit[cite: 130, 133]. [cite_start]For a prototype with minimal usage, there are no expected costs[cite: 122].
-* **Rate Limits**: The API has specific rate limits (e.g., requests per minute). [cite_start]The application handles these failures gracefully by logging errors and providing a user-friendly message[cite: 148].
-* [cite_start]**Documentation**: The project includes guidance on the AI provider setup, addressing a requirement of the assignment[cite: 121].
+Create a file named .env in the server directory and add your Gemini API key to it:
 
-***
+GEMINI_API_KEY=AIzaSyBkV6k0lsS6FTsJ7CBbQhuS9MOrDSoL12A
+Run the Application:
+Run this command from the root of the project to build and launch everything. The --build flag is crucial to ensure that Docker creates images with the latest code and dependencies.
 
-### Architectural Decisions
+Bash
 
-* [cite_start]**MERN Stack**: The MERN stack was chosen for its efficiency in building full-stack applications with a unified language[cite: 16].
-* **Docker Compose**: The entire application is containerized using Docker Compose for portability and ease of setup. [cite_start]This allows the application to run consistently in any environment without complex dependency management[cite: 19, 120].
-* [cite_start]**Centralized AI Logic**: All AI integration logic is handled on the backend to keep the API key secure and to offload heavy processing from the frontend[cite: 124, 70].
+docker-compose up --build
+Access the Application:
+Once the containers are up, open your browser and go to http://localhost:3000.
 
-***
+AI Integration & Cost Analysis
+Provider: I chose the Google Gemini API (gemini-1.5-flash model) for its robust vision capabilities.
 
-### TODO.md (Future Enhancements)
+Cost: The Gemini API offers a free tier with a generous rate limit. For a prototype with minimal usage, there are no expected costs.
 
-* [cite_start][ ] Implement a threaded discussion system for collaborative feedback[cite: 58].
-* [cite_start][ ] Add export features (PDF reports, JSON data) for development handoff[cite: 64, 65].
-* [cite_start][ ] Develop comprehensive unit and integration tests[cite: 97, 98].
-* [cite_start][ ] Implement user authentication and role management[cite: 46].
-* [cite_start][ ] Optimize image processing for large files to improve performance and manage costs[cite: 78, 79].
+Rate Limits: The app is designed to handle potential API rate limits gracefully, which is a key part of the robust architecture.
+
+Documentation: The project includes guidance on the AI provider setup, addressing a requirement of the assignment.
+
+Architectural Decisions
+MERN Stack: I went with the MERN stack for a consistent, JavaScript-based development experience.
+
+Docker Compose: This was a core requirement. It makes the entire project portable and easy to run without worrying about local dependencies.
+
+Centralized AI Logic: I kept all the AI logic on the backend. This keeps the API key secure and offloads heavy processing from the frontend, ensuring a better user experience.
+
+TODO.md (Future Enhancements)
+[ ] Build out the threaded discussion system for collaborative feedback.
+
+[ ] Add export features (PDF/JSON) for better handoff to a development team.
+
+[ ] Write a comprehensive test suite (npm test) to validate core behaviors.
+
+[ ] Implement user authentication and role management.
+
+[ ] Optimize image processing for large files to improve performance and manage costs.
+
+
+
+
+
+
+
+Gemini can make mistakes, so double-check
