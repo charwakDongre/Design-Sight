@@ -1,4 +1,3 @@
-// designsight-prototype/server/routes/projects.js
 const express = require('express');
 const multer = require('multer');
 const fs = require('fs');
