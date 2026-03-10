@@ -47,7 +47,7 @@ I designed the project to be easy to run end-to-end with Docker Compose.
     I used the Google Gemini API, which is a real AI vision model as required. You'll need to get your own key from Google AI Studio.
     * Create a file named `.env` in the `server` directory and add your Gemini API key to it:
         ```
-        GEMINI_API_KEY=AIzaSyBkV6k0lsS6FTsJ7CBbQhuS9MOrDSoL12A
+        GEMINI_API_KEY=YOUR_API_KEY
         ```
 3.  **Run the Application**:
     Run this command from the root of the project to build and launch everything. The `--build` flag is crucial to ensure that Docker creates images with the latest code and dependencies.
